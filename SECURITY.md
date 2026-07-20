@@ -9,6 +9,8 @@ TuinPlanner kent twee rollen, bepaald door het e-mailadres waarmee wordt ingelog
 | Community | gedeeld account (`VITE_COMMUNITY_EMAIL`) | lezen, taken afvinken, notities en foto's toevoegen |
 | Admin | persoonlijke accounts (`VITE_ADMIN_EMAILS`) | alles, inclusief teeltplan, bedden, gewassen en imports |
 
+Binnen de community-rol bestaat daarnaast een **commissiemodus**: leden wisselen daarnaar via het slotje in de navigatie, met de pincode uit `VITE_COMMISSIE_PIN`. Die modus toont extra bewerkknoppen, maar is een gemaksdrempel in de browser en geen beveiligingsgrens.
+
 De handhaving gebeurt op twee plekken, en die moeten overeenkomen:
 
 1. **In de app** via `VITE_ADMIN_EMAILS` (bepaalt welke knoppen zichtbaar zijn).

@@ -176,7 +176,7 @@ export function Handleiding() {
     overTitle: 'Over TuinPlanner',
     overIntro: `Een plannings- en taakbeheer app voor ${GARDEN_NAME}. Teamleden kunnen taken inzien, afvinken en opmerkingen achterlaten. Real-time synchronisatie via Firebase houdt alles up-to-date.`,
     overTech: 'Tech stack: React, TypeScript, Tailwind CSS, Firebase',
-    overCredits: 'TuinPlanner is open source ontwikkeld door de Phood Community Tuin Eindhoven (Wanda Kruijt & Claude Code, Anthropic) en vrij te gebruiken voor niet-commerciële tuinprojecten.',
+    overCredits: 'TuinPlanner is open source ontwikkeld door Riel Roots, Permacultuur Community Tuin Eindhoven (Wanda Kruijt & Claude Code, Anthropic), voortgekomen uit het Phood Community Garden initiatief, en vrij te gebruiken voor niet-commerciële tuinprojecten.',
   } : {
     title: 'User Guide',
     subtitle: 'Welcome to TuinPlanner! Here you\'ll find an overview of all features.',
@@ -278,7 +278,7 @@ export function Handleiding() {
     overTitle: 'About TuinPlanner',
     overIntro: `A planning and task management app for ${GARDEN_NAME}. Team members can view tasks, check them off, and leave comments. Real-time synchronization via Firebase keeps everything up-to-date.`,
     overTech: 'Tech stack: React, TypeScript, Tailwind CSS, Firebase',
-    overCredits: 'TuinPlanner is open source, developed by the Phood Community Garden Eindhoven (Wanda Kruijt & Claude Code, Anthropic), free to use for non-commercial garden projects.',
+    overCredits: 'TuinPlanner is open source, developed by Riel Roots, Permaculture Community Garden Eindhoven (Wanda Kruijt & Claude Code, Anthropic), which grew out of the Phood Community Garden initiative. Free to use for non-commercial garden projects.',
   };
 
   return (

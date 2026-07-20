@@ -24,13 +24,11 @@ import { genereerVensterTaken, opruimenOudeTaken, isTaakUrgent, berekenDynamisch
 import { nuISO } from '../utils/dateUtils';
 import * as firebaseService from '../services/firebaseService';
 import { verwijderAlleFotos } from '../services/storageService';
+import { COMMISSIE_PIN } from '../config/appConfig';
 
 // ============================================
 // STATE TYPE
 // ============================================
-
-// PIN code voor commissie mode (kan later in env var)
-const COMMISSIE_PIN = '1234';
 
 interface AppState {
   data: AppData;

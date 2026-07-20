@@ -4,7 +4,7 @@
 
 TuinPlanner is een web-app waarmee de commissie en community van een gemeenschapstuin het teeltplan, de wekelijkse taken en de oogst bijhouden. De app draait in de browser, synchroniseert realtime via Firebase en is tweetalig (NL/EN).
 
-TuinPlanner is ontwikkeld door en voor de Phood Community Tuin in Eindhoven en wordt als open source beschikbaar gesteld voor andere verenigingen en niet-commerciële tuinprojecten.
+TuinPlanner is ontwikkeld door en voor Riel Roots, Permacultuur Community Tuin Eindhoven (voortgekomen uit het Phood Community Garden initiatief) en wordt als open source beschikbaar gesteld voor andere verenigingen en niet-commerciële tuinprojecten.
 
 ## Wat kan je ermee?
 
@@ -48,6 +48,8 @@ Elke vereniging draait een **eigen kopie** van TuinPlanner, met een eigen (grati
 
 Volg [SETUP.md](SETUP.md) voor de complete installatie: Firebase-project aanmaken, accounts en beveiligingsregels instellen en de app publiceren op Vercel. Voor een kleine vereniging volstaan de gratis abonnementen van Firebase (Spark) en Vercel (Hobby).
 
+**Geen programmeerervaring?** Met een AI-assistent zoals Claude Code of OpenAI Codex kan je de installatie in gewone taal laten uitvoeren. Zie [SETUP-MET-AI.md](SETUP-MET-AI.md).
+
 ## Tech stack
 
 | Onderdeel | Keuze |
@@ -63,6 +65,7 @@ Volg [SETUP.md](SETUP.md) voor de complete installatie: Firebase-project aanmake
 ## Documentatie
 
 - [SETUP.md](SETUP.md) — stap voor stap je eigen TuinPlanner opzetten
+- [SETUP-MET-AI.md](SETUP-MET-AI.md) — opzetten zonder programmeerkennis, met Claude Code of Codex
 - [ARCHITECTURE.md](ARCHITECTURE.md) — technische opzet en datamodel
 - [DEVELOPMENT.md](DEVELOPMENT.md) — lokaal ontwikkelen, scripts en conventies
 - [SECURITY.md](SECURITY.md) — rollen, beveiligingsregels en meldpunt
@@ -74,4 +77,4 @@ TuinPlanner is beschikbaar onder de [PolyForm Noncommercial License 1.0.0](LICEN
 
 ## Credits
 
-Gemaakt door Wanda Kruijt (Phood Community Tuin Eindhoven) samen met Claude Code (Anthropic). Van Excel-sheets naar werkende app.
+Gemaakt door [Wanda Kruijt](https://www.linkedin.com/in/wandakruijt/) van Riel Roots, Permacultuur Community Tuin Eindhoven, samen met Claude Code (Anthropic). Riel Roots komt voort uit het Phood Community Garden initiatief. Van Excel-sheets naar werkende app.

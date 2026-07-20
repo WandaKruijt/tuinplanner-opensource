@@ -10,4 +10,4 @@ Eerste open source release van TuinPlanner.
 - Sjabloon voor Firebase-databaseregels en complete setup-handleiding voor verenigingen.
 - Licentie: PolyForm Noncommercial 1.0.0.
 
-TuinPlanner is voortgekomen uit de interne planner van de Phood Community Tuin Eindhoven; de wijzigingsgeschiedenis van vóór deze release staat in die (besloten) repository.
+TuinPlanner is voortgekomen uit de interne planner van Riel Roots, Permacultuur Community Tuin Eindhoven (ontstaan uit het Phood Community Garden initiatief); de wijzigingsgeschiedenis van vóór deze release staat in die (besloten) repository.

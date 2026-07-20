@@ -25,6 +25,15 @@ export const COMMUNITY_EMAIL: string =
   import.meta.env.VITE_COMMUNITY_EMAIL || 'community@example.com';
 
 /**
+ * Pincode waarmee community-leden binnen de app naar commissiemodus
+ * kunnen wisselen (het slotje in de navigatie). Dit is een drempel
+ * tegen per-ongeluk-klikken, geen echte beveiliging: de echte
+ * schrijfrechten worden door de Firebase-regels bepaald.
+ */
+export const COMMISSIE_PIN: string =
+  import.meta.env.VITE_COMMISSIE_PIN || '1234';
+
+/**
  * Demomodus: de app draait dan zonder Firebase, met voorbeelddata
  * in het geheugen. Wijzigingen verdwijnen bij herladen van de pagina.
  */

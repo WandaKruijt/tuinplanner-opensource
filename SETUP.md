@@ -2,6 +2,8 @@
 
 Deze handleiding leidt je stap voor stap door de installatie van een eigen TuinPlanner. Je hebt geen programmeerkennis nodig, wel een uurtje tijd en een Google-account. Alles kan met de gratis abonnementen van Firebase en Vercel.
 
+**Tip:** vind je dit spannend of wil je begeleiding, laat dan een AI-assistent zoals Claude Code of OpenAI Codex deze stappen samen met je uitvoeren. Zie [SETUP-MET-AI.md](SETUP-MET-AI.md).
+
 **Overzicht van wat je gaat doen:**
 
 1. De code ophalen en lokaal proberen
@@ -41,10 +43,13 @@ Kopieer in de projectmap `.env.example` naar `.env` en vul alles in:
 VITE_GARDEN_NAME=Buurttuin De Wortel
 VITE_ADMIN_EMAILS=voorzitter@mijntuin.nl
 VITE_COMMUNITY_EMAIL=community@mijntuin.nl
+VITE_COMMISSIE_PIN=5678
 VITE_FIREBASE_API_KEY=...      (enzovoort, uit de Firebase Console)
 ```
 
 ## Stap 3 — Accounts en beveiligingsregels
+
+**Commissie-pincode.** Ingelogde leden kunnen in de app via het slotje in de navigatie naar commissiemodus wisselen; daarvoor vragen we de pincode uit `VITE_COMMISSIE_PIN`. Kies een eigen code en deel die alleen met commissieleden. Dit is een gemaksdrempel tegen per ongeluk klikken; de echte rechten worden door de Firebase-regels bepaald.
 
 **Accounts.** Maak in Firebase Authentication twee gebruikers aan (Users → Add user):
 
@@ -78,7 +83,7 @@ Wil je naast je productie-app een openbare demo (zoals de demo van dit project),
 
 ## Eigen plattegronden
 
-De plattegronden in `public/images/plattegronden/` zijn voorbeelden (van de Phood Community Tuin). Vervang ze door kaarten van je eigen tuin met dezelfde bestandsnamen, of pas de paden aan in [src/components/Plattegronden.tsx](src/components/Plattegronden.tsx).
+De plattegronden in `public/images/plattegronden/` zijn voorbeelden (van Riel Roots, Permacultuur Community Tuin Eindhoven). Vervang ze door kaarten van je eigen tuin met dezelfde bestandsnamen, of pas de paden aan in [src/components/Plattegronden.tsx](src/components/Plattegronden.tsx).
 
 ## Problemen?
 
