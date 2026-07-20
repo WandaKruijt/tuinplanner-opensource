@@ -1,0 +1,86 @@
+{
+  "rules": {
+    // Iedereen die ingelogd is kan lezen
+    ".read": "auth != null",
+    
+    // ========================================
+    // STATISCHE DATA - Alleen Admin
+    // Deze data mag niet per ongeluk worden overschreven
+    // ========================================
+    
+    "gewassen": {
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    },
+    
+    "bedden": {
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    },
+    
+    "teeltplan": {
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    },
+    
+    // ========================================
+    // DYNAMISCHE DATA - Iedereen (na inlog)
+    // Commissie/community kunnen dit aanpassen
+    // ========================================
+    
+    "taken": {
+      ".write": "auth != null"
+    },
+    
+    "oogstlijst": {
+      ".write": "auth != null"
+    },
+    
+    "oogstRegistraties": {
+      ".write": "auth != null"
+    },
+    
+    "oogstInstructies": {
+      ".write": "auth != null"
+    },
+    
+    "instructies": {
+      ".write": "auth != null"
+    },
+    
+    "signaleringen": {
+      ".write": "auth != null"
+    },
+    
+    "bedVoortgang": {
+      ".write": "auth != null"
+    },
+
+    "taakgroepOverrides": {
+      ".write": "auth != null"
+    },
+
+    "gewassenlijst": {
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    },
+
+    // ========================================
+    // ADMIN FUNCTIES - Alleen admin
+    // ========================================
+    
+    "backups": {
+      ".read": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'",
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    },
+    
+    "audit_log": {
+      ".read": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'",
+      ".write": "auth != null"
+    },
+    
+    // ========================================
+    // METADATA
+    // ========================================
+    
+    "metadata": {
+      ".write": "auth != null && auth.token.email === 'ADMIN-EMAIL-HIER@example.com'"
+    }
+  }
+}

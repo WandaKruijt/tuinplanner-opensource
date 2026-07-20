@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Lokale env-bestanden met credentials
+# (.env.demo en .env.example bevatten geen geheimen en horen wél in git)
+.env
+.env.local
+.env.*.local
+.env.keys
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# Firebase service-accountsleutels (nooit committen)
+serviceAccountKey.json
+**/serviceAccountKey.json
+*-firebase-adminsdk-*.json
+firebase-credentials.json

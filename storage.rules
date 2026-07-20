@@ -1,0 +1,27 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Exports - authenticated users kunnen lezen en schrijven
+    match /exports/{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Foto's van taken (incl. ad-hoc taken) - pad: fotos/taken/{taakId}/...
+    match /fotos/taken/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Foto's van oogst-instructies (legacy) - pad: fotos/oogstInstructies/{id}/...
+    match /fotos/oogstInstructies/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Foto's van instructies (nieuw) - pad: fotos/instructies/{id}/...
+    match /fotos/instructies/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
