@@ -30,7 +30,7 @@ function DemoBanner() {
 
   return (
     <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 bg-amber-100 border border-amber-300 text-amber-800 text-xs px-4 py-2 rounded-full shadow-md pointer-events-none">
-      Demomodus met voorbeelddata: wijzigingen verdwijnen bij herladen
+      Demo met fictieve voorbeelddata: wijzigingen verdwijnen bij herladen
     </div>
   );
 }

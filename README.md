@@ -40,7 +40,9 @@ npm install
 npm run dev:demo
 ```
 
-De demomodus draait volledig op voorbeelddata in het geheugen. Je bent automatisch ingelogd als admin en kan alles doorklikken; wijzigingen verdwijnen bij het herladen van de pagina. Zie [src/demo/README.md](src/demo/README.md) voor hoe dit werkt.
+De demomodus draait volledig op een **fictieve demo-tuin** in het geheugen: een verzonnen tuintje van tien bedden waarvan de taken bij het opstarten met de echte taakgenerator worden gegenereerd, zodat de demo in elk seizoen actueel is. Je bent automatisch ingelogd als admin en kan alles doorklikken; wijzigingen verdwijnen bij het herladen van de pagina. Zie [src/demo/README.md](src/demo/README.md) voor hoe dit werkt.
+
+Online demo: [tuinplanner-opensource-demo.vercel.app](https://tuinplanner-opensource-demo.vercel.app)
 
 ## Zelf gebruiken met je eigen tuin
 

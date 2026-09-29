@@ -11,6 +11,7 @@ import type { VerrijktGewas } from '../types';
 import { TEELTGROEP_EMOJI, TEELTGROEP_EN } from '../types';
 import { searchGewassen, getUniekeTeeltgroepen, filterOpTeeltgroep } from '../utils/gewasUtils';
 import { GewasDetailPage } from './GewasDetailPage';
+import { DEMO_MODE } from '../config/appConfig';
 
 // ============================================
 // GEWAS KAART COMPONENT
@@ -118,7 +119,9 @@ export function GewassenOverzicht() {
   const teeltplan = state.data.teeltplan || [];
 
   // Filter encyclopedie: toon alleen gewassen die in het teeltplan voorkomen
+  // (in demomodus tonen we de volledige encyclopedie)
   const verrijkteGewassen = useMemo(() => {
+    if (DEMO_MODE) return alleVerrijkteGewassen;
     if (teeltplan.length === 0) return alleVerrijkteGewassen;
 
     // Bouw een set van gewas-namen uit het teeltplan (lowercase voor case-insensitive matching)

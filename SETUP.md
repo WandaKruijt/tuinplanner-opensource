@@ -79,7 +79,7 @@ De app is tweetalig. Vaste teksten zijn altijd in beide talen beschikbaar. Wil j
 
 ## Eigen demo-omgeving (optioneel)
 
-Wil je naast je productie-app een openbare demo (zoals de demo van dit project), maak dan in Vercel een tweede project aan op dezelfde repository en zet daar het build-commando op `npm run build:demo`. Die site draait dan zonder Firebase, op de voorbeelddata uit `public/demo-data.json`.
+Wil je naast je productie-app een openbare demo (zoals de demo van dit project), maak dan in Vercel een tweede project aan op dezelfde repository en zet daar het build-commando op `npm run build:demo`. Die site draait dan zonder Firebase, op een fictieve demo-tuin die bij het opstarten wordt gegenereerd (zie [src/demo/README.md](src/demo/README.md)).
 
 ## Eigen plattegronden
 

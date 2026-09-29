@@ -1,11 +1,27 @@
 /**
  * In-memory datastore voor de demomodus.
  *
- * De store laadt eenmalig /demo-data.json en houdt daarna alle data in het
- * geheugen bij. Wijzigingen werken volledig (taken afvinken, notities, enz.)
- * maar verdwijnen zodra de pagina wordt herladen. Zo kan iedereen vrij
- * doorklikken zonder dat de demo vervuild raakt.
+ * De store bouwt bij het opstarten een volledig FICTIEVE dataset op
+ * (zie seedDemoData.ts): een verzonnen tuintje van 10 bedden waarvoor de
+ * taken met de echte taakgenerator worden gegenereerd, plus de
+ * gewassen-encyclopedie uit /demo-gewassen.json. Wijzigingen werken
+ * volledig (taken afvinken, notities, enz.) maar verdwijnen zodra de
+ * pagina wordt herladen. Zo kan iedereen vrij doorklikken zonder dat de
+ * demo vervuild raakt.
  */
+
+import { bouwDemoData } from './seedDemoData';
+
+// Start de demo in commissiemodus, zodat bezoekers meteen alle functies
+// zien (terugwisselen naar community kan altijd; de pin is dan 1234).
+// Dit moet bij module-initialisatie gebeuren, vóórdat de app de rol leest.
+try {
+  if (!localStorage.getItem('tuinplanner_rol')) {
+    localStorage.setItem('tuinplanner_rol', 'commissie');
+  }
+} catch {
+  // localStorage niet beschikbaar - geen probleem
+}
 
 type Listener = { path: string; cb: () => void };
 
@@ -16,18 +32,21 @@ let readyPromise: Promise<void> | null = null;
 
 export function ready(): Promise<void> {
   if (!readyPromise) {
-    readyPromise = fetch('/demo-data.json')
+    readyPromise = fetch('/demo-gewassen.json')
       .then((res) => {
-        if (!res.ok) throw new Error(`demo-data.json niet gevonden (${res.status})`);
+        if (!res.ok) throw new Error(`demo-gewassen.json niet gevonden (${res.status})`);
         return res.json();
       })
-      .then((data) => {
-        tree = data && typeof data === 'object' ? data : {};
-        console.info('[DEMO] Voorbeelddata geladen');
-      })
       .catch((err) => {
-        console.error('[DEMO] Kon demo-data.json niet laden:', err);
-        tree = {};
+        console.error('[DEMO] Kon de gewassen-encyclopedie niet laden:', err);
+        return {};
+      })
+      .then((gewassen) => {
+        tree = {
+          ...bouwDemoData(new Date()),
+          gewassen: gewassen && typeof gewassen === 'object' ? gewassen : {},
+        };
+        console.info('[DEMO] Fictieve demo-tuin gegenereerd');
       });
   }
   return readyPromise;
