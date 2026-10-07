@@ -24,7 +24,7 @@ import { genereerVensterTaken, opruimenOudeTaken, isTaakUrgent, berekenDynamisch
 import { nuISO } from '../utils/dateUtils';
 import * as firebaseService from '../services/firebaseService';
 import { verwijderAlleFotos } from '../services/storageService';
-import { COMMISSIE_PIN } from '../config/appConfig';
+import { COMMISSIE_PIN, DEMO_MODE } from '../config/appConfig';
 
 // ============================================
 // STATE TYPE
@@ -1123,7 +1123,8 @@ export function AppProvider({ children }: AppProviderProps) {
 
   // Rol functies
   const wisselNaarCommissie = (pin: string): boolean => {
-    if (pin === COMMISSIE_PIN) {
+    // In demomodus is er geen pincode: iedereen mag alles zien
+    if (DEMO_MODE || pin === COMMISSIE_PIN) {
       dispatch({ type: 'SET_ROL', payload: 'commissie' });
       toonToast('success', 'Commissie modus geactiveerd');
       return true;

@@ -28,7 +28,7 @@ Daardoor is de demo altijd actueel en seizoenscorrect, in welke maand je hem ook
 
 Wijzigingen die een bezoeker in de demo maakt (taken afvinken, notities, foto's) werken echt, maar staan alleen in het geheugen en verdwijnen bij het herladen van de pagina.
 
-De demo start in commissiemodus zodat alle functies zichtbaar zijn. Wissel je naar community en wil je terug, dan is de pincode `1234`.
+De demo start in commissiemodus zodat alle functies zichtbaar zijn. Wisselen tussen community- en commissiemodus kan vrij; de pincode die de echte app daarvoor vraagt, is in de demo uitgeschakeld.
 
 ## Demo starten
 

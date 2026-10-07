@@ -21,6 +21,7 @@ import {
 import { useApp } from '../context/AppContext';
 import { useAuth } from '../context/AuthContext';
 import { useI18n } from '../i18n';
+import { DEMO_MODE } from '../config/appConfig';
 import type { NavigatieTab } from '../types';
 
 interface NavItemProps {
@@ -139,7 +140,12 @@ export function Navigation() {
         {/* Rol indicator (commissie/community modus) */}
         <div className="mb-4 px-2">
           <button
-            onClick={() => isCommissie ? wisselNaarCommunity() : setToonPinModal(true)}
+            onClick={() => {
+              // In demomodus is er geen pincode: iedereen mag alles zien
+              if (isCommissie) wisselNaarCommunity();
+              else if (DEMO_MODE) wisselNaarCommissie('');
+              else setToonPinModal(true);
+            }}
             className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
               isCommissie
                 ? 'bg-amber-100 text-amber-800 hover:bg-amber-200'
